@@ -1,7 +1,0 @@
-{
-  "title" : "Perseids",
-  "route" : "http://localhost:3000/dmm_api/item/TreebankCite/:doc/return/edit",
-  "params" : [
-    "doc"
-  ]
-}

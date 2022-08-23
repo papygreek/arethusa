@@ -14,7 +14,7 @@ angular.module('arethusa.core').factory('Auth', [
 
     function Pinger(url,withCredentials) {
       if (url) {
-        var resource = $resource(url, null, { get: { withCredentials: withCredentials } });
+        var resource = $resource(url, null, { get: { withCredentials: withCredentials, headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token')} } });
         this.checkAuth = function(success, error) {
           resource.get(success, error);
         };
@@ -46,7 +46,7 @@ angular.module('arethusa.core').factory('Auth', [
       }
 
       function checkForAuthFailure(res) {
-        if (res.status === 403) loginWarning();
+        if (res.status === 403 || res.status === 400) loginWarning();
       }
 
       this.withCredentials = conf.crossDomain ? true : false;
@@ -91,6 +91,8 @@ angular.module('arethusa.core').factory('Auth', [
       this.transformRequest = function(headers) {
         if (self.conf.type == 'CSRF') {
           headers()[self.conf.header] = $cookies[self.conf.cookie];
+        } else if (self.conf.type == 'bearer') {
+          headers()[self.conf.header] = 'Bearer '+localStorage.getItem('token')
         }
       };
     };

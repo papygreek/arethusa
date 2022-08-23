@@ -1,0 +1,12 @@
+{
+  "papygreekAuth" : {
+    "type": "bearer",
+    "cookie": "csrftoken",
+    "header": "Authorization",
+    "crossDomain" : false,
+    "ping" : "https://papygreek.hum.helsinki.fi/api/user/ping/editor",
+    "skipModes" : [
+      "viewer"
+    ]
+  }
+}

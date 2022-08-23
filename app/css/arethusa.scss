@@ -139,10 +139,6 @@ html, body {
   width: 100%;
 }
 
-.row {
-  max-width: 95vw;
-}
-
 @mixin css-triangle($size, $top, $left, $color, $z) {
     content: '';
     display: block;
@@ -1178,3 +1174,39 @@ syntactical-description {
     font-style: italic;
   }
 }
+
+
+
+.top-bar {
+  padding-left:10px;
+}
+
+.top-bar ul.button-group li:last-child {
+  display:none
+}
+
+ul.title-area {
+  display:none;
+}
+
+.top-bar, .top-bar-section .has-form, .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section ul {
+  background: white;
+  }
+
+  .navbar-navigation a {
+    color: black;
+    }
+
+    .top-bar-section li:not(.has-form) a:not(.button):hover {
+      background: none;
+      }
+
+
+      .top-bar-section ul li:hover:not(.has-form)>a {
+        background: #272727;
+        color: black;
+        }
+
+        .top-bar-section ul li>a {
+          color: black;
+          }

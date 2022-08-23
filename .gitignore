@@ -2,13 +2,13 @@ node_modules/*
 bower_components/*
 *.swp
 coverage
-dist/*
+#dist/*
 !dist/i18n
 docs/*
 !docs/custom
 docs/custom/plato
 data/
-dist/
+#dist/
 .idea/
 deployment/
 .sass-cache

@@ -7,7 +7,7 @@
  */
 angular.module('arethusa.core', [
   'angulartics',
-  'angulartics.google.analytics',
+  //'angulartics.google.analytics',
   'arethusa.util',
   'ngResource',
   'ngCookies',

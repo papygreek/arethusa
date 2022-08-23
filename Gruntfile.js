@@ -142,7 +142,7 @@ Z.fun = {
         "./bower_components/stacktrace-js/dist/stacktrace.min.js",
         "./bower_components/angular-uuid2/dist/angular-uuid2.min.js",
         //"./vendor/angular-foundation-colorpicker/js/foundation-colorpicker-module.min.js",
-        "./vendor/uservoice/uservoice.min.js",
+        //"./vendor/uservoice/uservoice.min.js",
         "./vendor/angularJS-toaster/toaster.min.js",
         "./bower_components/angular-highlightjs/angular-highlightjs.min.js",
         "./bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js",
@@ -203,7 +203,7 @@ function arethusaUglify() {
       banner: Z.var.misc.banner
     },
     dagred3: { files: { "vendor/dagre-d3/dagre-d3.min.js": "vendor/dagre-d3/dagre-d3.js"} },
-    uservoice: { files: { "vendor/uservoice/uservoice.min.js": "vendor/uservoice/uservoice.js"} },
+    //uservoice: { files: { "vendor/uservoice/uservoice.min.js": "vendor/uservoice/uservoice.js"} },
     toasts: { files: { "vendor/angularJS-toaster/toaster.min.js": "vendor/angularJS-toaster/toaster.js"} },
     templates: { files: { "dist/templates.min.js": "app/js/templates/compiled/*.js"} },
     app: { files: { "dist/arethusa.min.js": "dist/arethusa.concat.js"} }
@@ -622,6 +622,9 @@ module.exports = function(grunt) {
   grunt.registerTask('server', ['clean:dist', 'version', 'minify:all', 'express:server']);
   grunt.registerTask('reloading-server', ['clean:dist', 'version', 'concurrent:server']);
   grunt.registerTask('doc-server', ['concurrent:docs']);
+
+  // Added: just compile
+  grunt.registerTask('compile', ['clean:dist', 'version', 'minify:all']);
 
   grunt.registerTask('reloader', 'concurrent:watches');
   grunt.registerTask('reloader:no-css', 'watch:serverNoCss');

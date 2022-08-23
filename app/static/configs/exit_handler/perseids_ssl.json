@@ -1,7 +1,0 @@
-{
-  "title" : "Perseids",
-  "route" : "https://sosol.perseids.org/sosol/dmm_api/item/TreebankCite/:doc/return/edit",
-  "params" : [
-    "doc"
-  ]
-}

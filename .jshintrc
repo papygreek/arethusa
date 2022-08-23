@@ -16,7 +16,7 @@
     "aG": true,
     "arethusaMocks" : true,
     "arethusaLogger" : true,
-    "UserVoice" : true,
+    "UserVoice" : false,
     "inject" : false,
     "module" : false,
     "require" : false,

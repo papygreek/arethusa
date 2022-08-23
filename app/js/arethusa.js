@@ -10,7 +10,7 @@
  */
 angular.module('arethusa', [
   'angulartics',
-  'angulartics.google.analytics',
+  //'angulartics.google.analytics',
   'ngRoute',
   'arethusa.core',
   'arethusa.contextMenu',

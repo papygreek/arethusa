@@ -85,7 +85,7 @@ angular.module('arethusa.core').controller('ArethusaCtrl', [
           notifier.success(translations.loadComplete());
 
           if (aU.isArethusaMainApplication()) {
-            UserVoice.push(['addTrigger', '#uservoicebutton', { mode: 'contact' }]);
+            //UserVoice.push(['addTrigger', '#uservoicebutton', { mode: 'contact' }]);
           }
 
           // start listening for events
