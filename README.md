@@ -1,2 +1,2 @@
-# Arethusa: Annotation Environment
+# Arethusa, PapyGreek Fork
 
