@@ -1020,10 +1020,10 @@ angular.module('arethusa').service('retrieverHelper', [
 'use strict';
 
 angular.module('arethusa').constant('VERSION', {
-  revision: '6c6c9bd2ba73f9e3c2808024ed78bf4ee68a872a',
-  branch: 'master',
+  revision: 'cb7709dfa5b6c823e4a0e1b0ef0c4fed46266df9',
+  branch: 'main',
   version: '0.2.5',
-  date: '2022-08-23T19:41:54.328Z',
+  date: '2022-12-12T09:34:08.738Z',
   repository: 'http://github.com/latin-language-toolkit/arethusa'
 });
 
