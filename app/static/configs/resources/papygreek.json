@@ -1,5 +1,5 @@
 {
-  "papygreekLocalResource" : {
+  "papygreekResource" : {
     "route" : "https://new.papygreek.com/api/arethusa/:doc/:layer",
     "params" : [
       "doc",
@@ -8,7 +8,7 @@
     "auth": "papygreekAuth"
   },
 
-  "papygreekLocalComments" : {
+  "papygreekComments" : {
     "route" : "https://new.papygreek.com/api/arethusa/:doc/:layer/comments",
     "params" : [
       "doc",
