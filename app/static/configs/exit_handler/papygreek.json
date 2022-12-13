@@ -1,6 +1,6 @@
 {
   "title" : "Papygreek",
-  "route" : "https://papygreek.hum.helsinki.fi/text/:text",
+  "route" : "https://new.papygreek.com/text/:text",
   "params" : [
     "text"
   ]

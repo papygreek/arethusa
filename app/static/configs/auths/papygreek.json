@@ -4,7 +4,7 @@
     "cookie": "csrftoken",
     "header": "Authorization",
     "crossDomain" : false,
-    "ping" : "https://papygreek.hum.helsinki.fi/api/user/ping/editor",
+    "ping" : "https://new.papygreek.com/api/user/ping/editor",
     "skipModes" : [
       "viewer"
     ]

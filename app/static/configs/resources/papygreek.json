@@ -1,6 +1,6 @@
 {
-  "papygreekResource" : {
-    "route" : "https://papygreek.hum.helsinki.fi/v2/:doc/:layer",
+  "papygreekLocalResource" : {
+    "route" : "https://new.papygreek.com/api/arethusa/:doc/:layer",
     "params" : [
       "doc",
       "layer"
@@ -8,8 +8,8 @@
     "auth": "papygreekAuth"
   },
 
-  "papygreekComments" : {
-    "route" : "https://papygreek.hum.helsinki.fi/v2/:doc/:layer/comments",
+  "papygreekLocalComments" : {
+    "route" : "https://new.papygreek.com/api/arethusa/:doc/:layer/comments",
     "params" : [
       "doc",
       "layer"
