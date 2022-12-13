@@ -23,6 +23,7 @@
       "search",
       "comments",
       "depTree"
+
     ],
     "globalDefaults" : {
       "mode" : "viewer"
@@ -36,7 +37,7 @@
   },
   "navbar" : {
     "template" : "js/templates/navbar1.html",
-    "search" : true,
+    "search" : false,
     "notifier" : true,
     "navigation" : true
   },
@@ -86,6 +87,7 @@
     "relation" : {
       "template" : "js/templates/relation.html",
       "contextMenu" : true,
+      "advancedMode" : true,
       "contextMenuTemplate": "js/arethusa.relation/templates/context_menu.html",
       "@include" : "js/arethusa.relation/configs/relation/relations.json"
     },
@@ -125,7 +127,7 @@
 
   "relocateHandler" : {
     "production" :  {
-      "baseUrl" : "https://new.papygreek.com/api"
+      "baseUrl" : "https://new.papygreek.com"
      }
   },
 
