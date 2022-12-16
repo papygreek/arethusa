@@ -14,7 +14,14 @@ angular.module('arethusa.core').factory('Auth', [
 
     function Pinger(url,withCredentials) {
       if (url) {
-        var resource = $resource(url, null, { get: { withCredentials: withCredentials, headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token')} } });
+        var user = JSON.parse(localStorage.getItem('user'))
+        
+        if (user != null) {
+          var resource = $resource(url, null, { get: { withCredentials: withCredentials, headers: { 'Authorization': 'Bearer ' + user.token} } });
+        } else {
+          var resource = $resource(url, null, { get: { withCredentials: withCredentials, headers: { 'Authorization': 'Bearer null '} } });
+        }
+        
         this.checkAuth = function(success, error) {
           resource.get(success, error);
         };
@@ -92,7 +99,12 @@ angular.module('arethusa.core').factory('Auth', [
         if (self.conf.type == 'CSRF') {
           headers()[self.conf.header] = $cookies[self.conf.cookie];
         } else if (self.conf.type == 'bearer') {
-          headers()[self.conf.header] = 'Bearer '+localStorage.getItem('token')
+          var user = JSON.parse(localStorage.getItem('user'))
+
+          if (user != null) {
+            headers()[self.conf.header] = 'Bearer '+user.token
+          }
+          
         }
       };
     };

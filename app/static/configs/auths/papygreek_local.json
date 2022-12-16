@@ -3,7 +3,7 @@
     "type": "bearer",
     "cookie": "csrftoken",
     "header": "Authorization",
-    "crossDomain" : false,
+    "crossDomain" : true,
     "ping" : "https://127.0.0.1:5000/api/user/ping/editor",
     "skipModes" : [
       "viewer"
