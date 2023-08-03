@@ -1,12 +1,10 @@
 {
-  "papygreekAuth" : {
+  "papygreekAuth": {
     "type": "bearer",
     "cookie": "csrftoken",
     "header": "Authorization",
-    "crossDomain" : false,
-    "ping" : "https://new.papygreek.com/api/user/ping/editor",
-    "skipModes" : [
-      "viewer"
-    ]
+    "crossDomain": false,
+    "ping": "https://papygreek.com/api/user/ping/editor",
+    "skipModes": ["viewer"]
   }
 }
