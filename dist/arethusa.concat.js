@@ -3671,14 +3671,7 @@ angular.module('arethusa.core').factory('Auth', [
 
     function Pinger(url,withCredentials) {
       if (url) {
-        var user = JSON.parse(localStorage.getItem('user'))
-        
-        if (user != null) {
-          var resource = $resource(url, null, { get: { withCredentials: withCredentials, headers: { 'Authorization': 'Bearer ' + user.token} } });
-        } else {
-          var resource = $resource(url, null, { get: { withCredentials: withCredentials, headers: { 'Authorization': 'Bearer null '} } });
-        }
-        
+        var resource = $resource(url, null, { get: { withCredentials: withCredentials, headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token')} } });
         this.checkAuth = function(success, error) {
           resource.get(success, error);
         };
@@ -3756,12 +3749,7 @@ angular.module('arethusa.core').factory('Auth', [
         if (self.conf.type == 'CSRF') {
           headers()[self.conf.header] = $cookies[self.conf.cookie];
         } else if (self.conf.type == 'bearer') {
-          var user = JSON.parse(localStorage.getItem('user'))
-
-          if (user != null) {
-            headers()[self.conf.header] = 'Bearer '+user.token
-          }
-          
+          headers()[self.conf.header] = 'Bearer '+localStorage.getItem('token')
         }
       };
     };
@@ -12927,10 +12915,10 @@ angular.module('arethusa').service('retrieverHelper', [
 'use strict';
 
 angular.module('arethusa').constant('VERSION', {
-  revision: '11f2326e8925e6f74267368ff4e5fead947f648d',
+  revision: 'a392d3dbdcbbf07bcce2562b390809721a98495e',
   branch: 'main',
   version: '0.2.5',
-  date: '2022-12-14T11:27:36.575Z',
+  date: '2022-12-13T21:18:24.023Z',
   repository: 'http://github.com/latin-language-toolkit/arethusa'
 });
 
