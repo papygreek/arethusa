@@ -1,47 +1,41 @@
 {
-  "papygreekResource" : {
-    "route" : "https://new.papygreek.com/api/arethusa/:doc/:layer",
-    "params" : [
-      "doc",
-      "layer"
-    ],
+  "papygreekResource": {
+    "route": "https://papygreek.com/api/arethusa/:doc/:layer",
+    "params": ["doc", "layer"],
     "auth": "papygreekAuth"
   },
 
-  "papygreekComments" : {
-    "route" : "https://new.papygreek.com/api/arethusa/:doc/:layer/comments",
-    "params" : [
-      "doc",
-      "layer"
-    ],
+  "papygreekComments": {
+    "route": "https://papygreek.com/api/arethusa/:doc/:layer/comments",
+    "params": ["doc", "layer"],
     "auth": "papygreekAuth"
   },
 
-  "lexInvFusekiEndpoint" : {
-    "route" : "https://services.perseids.org/fuseki/ds/query?format=json"
+  "lexInvFusekiEndpoint": {
+    "route": "https://services.perseids.org/fuseki/ds/query?format=json"
   },
 
-  "morphologyServiceLat" : {
-    "route" : "https://morph.perseids.org/analysis/word?lang=lat&engine=morpheuslat"
+  "morphologyServiceLat": {
+    "route": "https://morph.perseids.org/analysis/word?lang=lat&engine=morpheuslat"
   },
 
-  "newMorphologyServiceLat" : {
-    "route" : "https://morph.perseids.org/analysis/word?lang=lat&engine=morpheuslat"
+  "newMorphologyServiceLat": {
+    "route": "https://morph.perseids.org/analysis/word?lang=lat&engine=morpheuslat"
   },
 
-  "morphologyServiceGrc" : {
-    "route" : "https://morph.perseids.org/analysis/word?lang=grc&engine=morpheusgrc"
+  "morphologyServiceGrc": {
+    "route": "https://morph.perseids.org/analysis/word?lang=grc&engine=morpheusgrc"
   },
 
-  "newMorphologyServiceGrc" : {
-    "route" : "https://morph.perseids.org/analysis/word?lang=grc&engine=morpheusgrc"
+  "newMorphologyServiceGrc": {
+    "route": "https://morph.perseids.org/analysis/word?lang=grc&engine=morpheusgrc"
   },
 
-  "sgGrammar" : {
-    "route" : "https://services.perseids.org/sg/:doc.html"
+  "sgGrammar": {
+    "route": "https://services.perseids.org/sg/:doc.html"
   },
 
-  "citeMapper" : {
-    "route" : "https://services.perseids.org/cite_mapper/find_cite"
+  "citeMapper": {
+    "route": "https://services.perseids.org/cite_mapper/find_cite"
   }
 }

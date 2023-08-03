@@ -1,20 +1,20 @@
 {
-  "main" : {
-    "@include" : "static/configs/layouts/papygreek.json",
+  "main": {
+    "@include": "static/configs/layouts/papygreek.json",
     "auxConfPath": "https://www.perseids.org/tools/arethusa-configs",
-    "retrievers" : {
-      "TreebankRetriever" : {
-        "resource" : "papygreekResource",
-        "docIdentifier" : "treebank"
+    "retrievers": {
+      "TreebankRetriever": {
+        "resource": "papygreekResource",
+        "docIdentifier": "treebank"
       }
     },
-    "persisters" : {
-      "TreebankPersister" : {
-        "resource" : "papygreekResource",
-        "docIdentifier" : "treebank"
+    "persisters": {
+      "TreebankPersister": {
+        "resource": "papygreekResource",
+        "docIdentifier": "treebank"
       }
     },
-    "plugins" : [
+    "plugins": [
       "text",
       "morph",
       "relation",
@@ -23,115 +23,114 @@
       "search",
       "comments",
       "depTree"
-
     ],
-    "globalDefaults" : {
-      "mode" : "viewer"
+    "globalDefaults": {
+      "mode": "viewer"
     },
-    "chunkParam" : "chunk",
-    "showKeys" : true
+    "chunkParam": "chunk",
+    "showKeys": true
   },
 
   "auths": {
-    "@include" : "static/configs/auths/papygreek.json"
+    "@include": "static/configs/auths/papygreek.json"
   },
-  "navbar" : {
-    "template" : "js/templates/navbar1.html",
-    "search" : false,
-    "notifier" : true,
-    "navigation" : true
-  },
-
-  "resources" : {
-    "@include" : "static/configs/resources/papygreek.json"
+  "navbar": {
+    "template": "js/templates/navbar1.html",
+    "search": false,
+    "notifier": true,
+    "navigation": true
   },
 
-  "plugins" : {
-    "text" : {
-      "main" : true,
-      "template"  : "js/templates/text_with_context.html"
+  "resources": {
+    "@include": "static/configs/resources/papygreek.json"
+  },
+
+  "plugins": {
+    "text": {
+      "main": true,
+      "template": "js/templates/text_with_context.html"
     },
 
-    "depTree" : {
-      "main" : true,
-      "contextMenu" : true,
+    "depTree": {
+      "main": true,
+      "contextMenu": true,
       "contextMenuTemplate": "js/arethusa.dep_tree/templates/context_menu.html",
-      "template" : "js/templates/dep_tree.html"
+      "template": "js/templates/dep_tree.html"
     },
 
-    "search" : {
-      "template" : "js/templates/search.html",
-      "regex" : true
+    "search": {
+      "template": "js/templates/search.html",
+      "regex": true
     },
 
-    "morph" : {
-      "retrievers" : {
-        "BspMorphRetriever" : {
-          "resource" : "morphologyServiceLat"
+    "morph": {
+      "retrievers": {
+        "BspMorphRetriever": {
+          "resource": "morphologyServiceLat"
         }
       },
-      "template"  : "js/templates/morph3.html",
-      "contextMenu" : true,
+      "template": "js/templates/morph3.html",
+      "contextMenu": true,
       "contextMenuTemplate": "js/arethusa.morph/templates/context_menu.html",
-      "lexicalInventory" : {
-        "retriever" : {
-          "LexicalInventoryRetriever" : {
-            "resource" : "lexInvFusekiEndpoint"
+      "lexicalInventory": {
+        "retriever": {
+          "LexicalInventoryRetriever": {
+            "resource": "lexInvFusekiEndpoint"
           }
         }
       },
-      "matchAll" : true,
-      "@include" : "js/arethusa.morph/configs/morph/lat_attributes.json"
+      "matchAll": true,
+      "@include": "js/arethusa.morph/configs/morph/lat_attributes.json"
     },
 
-    "relation" : {
-      "template" : "js/templates/relation.html",
-      "contextMenu" : true,
-      "advancedMode" : true,
+    "relation": {
+      "template": "js/templates/relation.html",
+      "contextMenu": true,
+      "advancedMode": true,
       "contextMenuTemplate": "js/arethusa.relation/templates/context_menu.html",
-      "@include" : "js/arethusa.relation/configs/relation/relations.json"
+      "@include": "js/arethusa.relation/configs/relation/relations.json"
     },
 
-    "history" : {
-      "template" : "js/templates/history.html"
+    "history": {
+      "template": "js/templates/history.html"
     },
 
-    "artificialToken" : {
-      "template" : "js/arethusa.artificial_token/templates/artificial_token.html"
+    "artificialToken": {
+      "template": "js/arethusa.artificial_token/templates/artificial_token.html"
     },
 
-    "comments" : {
-      "retriever" : {
-        "CommentsRetriever" : {
-          "resource" : "papygreekComments"
+    "comments": {
+      "retriever": {
+        "CommentsRetriever": {
+          "resource": "papygreekComments"
         }
       }
     },
 
-    "sg" : {
-      "retriever" : {
-        "SgGrammarRetriever" : {
-          "resource" : "sgGrammar"
+    "sg": {
+      "retriever": {
+        "SgGrammarRetriever": {
+          "resource": "sgGrammar"
         }
       },
-      "template" : "js/templates/sg.html",
-      "contextMenu" : true,
+      "template": "js/templates/sg.html",
+      "contextMenu": true,
       "contextMenuTemplate": "js/arethusa.sg/templates/context_menu.html",
-      "@include" : "js/arethusa.sg/configs/sg2/sg_labels.json"
+      "@include": "js/arethusa.sg/configs/sg2/sg_labels.json"
     }
   },
 
-  "exitHandler" : {
-    "@include" : "static/configs/exit_handler/papygreek.json"
+  "exitHandler": {
+    "@include": "static/configs/exit_handler/papygreek.json"
   },
 
-  "relocateHandler" : {
-    "production" :  {
-      "baseUrl" : "https://new.papygreek.com"
-     }
+  "relocateHandler": {
+    "production": {
+      "baseUrl": "https://papygreek.com"
+    }
   },
 
-  "keyCapture" : {
-    "@include" : "static/configs/keyboard/key_map.json"
+  "keyCapture": {
+    "@include": "static/configs/keyboard/key_map.json"
   }
 }

@@ -1,7 +1,5 @@
 {
-  "title" : "Papygreek",
-  "route" : "https://new.papygreek.com/text/:text",
-  "params" : [
-    "text"
-  ]
+  "title": "Papygreek",
+  "route": "https://papygreek.com/text/:text",
+  "params": ["text"]
 }
